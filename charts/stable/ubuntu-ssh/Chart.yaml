@@ -1,0 +1,19 @@
+apiVersion: v2
+name: ubuntu-ssh
+description: |
+  部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。
+version: 0.1.0
+appVersion: "latest"
+home: https://github.com/example/ubuntu-ssh
+sources:
+  - https://github.com/example/ubuntu-ssh
+maintainers:
+  - name: "niehaoran"
+    email: "niehaoran@yunna.net"
+annotations:
+  "yunna.net/category": "system-tools"
+  "yunna.net/category-zh": "系统工具"
+keywords:
+  - ubuntu
+  - ssh
+icon: "https://assets.yunna.net/i/2024/12/13/114s1hr.png"
