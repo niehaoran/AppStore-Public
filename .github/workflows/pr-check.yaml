@@ -4,20 +4,20 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
-      - 'charts/**'
+      - "charts/**"
 
 jobs:
   validate-charts:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    
+
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
-          
+
       - name: Set up Helm
         uses: azure/setup-helm@v3
         with:
@@ -37,17 +37,17 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           CHANGED_FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files --jq '.files[].path' | grep '^charts/stable/' || true)
-          
+
           if [ -z "$CHANGED_FILES" ]; then
             echo "No charts modified in this PR"
             exit 0
           fi
-          
+
           echo "Files changed in PR:"
           echo "$CHANGED_FILES"
-          
+
           CHANGED_DIRS=$(echo "$CHANGED_FILES" | awk -F/ '/^charts\/stable\/[^\/]+/{printf "%s/%s/%s\n", $1,$2,$3}' | sort -u)
-          
+
           echo "changed_dirs<<EOF" >> $GITHUB_OUTPUT
           echo "$CHANGED_DIRS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -56,7 +56,7 @@ jobs:
         id: validate
         run: |
           STATUS=0
-          
+
           while IFS= read -r chart; do
             if [ -z "$chart" ]; then
               continue
@@ -140,7 +140,7 @@ jobs:
               STATUS=1
             fi
           done <<< "${{ steps.changes.outputs.changed_dirs }}"
-          
+
           exit $STATUS
 
       - name: Check Version Bump
@@ -148,7 +148,7 @@ jobs:
         if: success()
         run: |
           STATUS=0
-          
+
           while IFS= read -r chart; do
             if [ -z "$chart" ]; then
               continue
@@ -158,8 +158,9 @@ jobs:
               continue  
             fi
             
-            if ! git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" | yq e '.version' - > /dev/null 2>&1; then
-              continue
+            if ! git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" > /dev/null 2>&1; then
+          echo "这是新增的 Chart，跳过版本检查"
+          continue
             fi
             
             OLD_VERSION=$(git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" | yq e '.version' -)
@@ -172,5 +173,5 @@ jobs:
               STATUS=1
             fi
           done <<< "${{ steps.changes.outputs.changed_dirs }}"
-          
+
           exit $STATUS
