@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2025-01-16T18:29:11.586941296Z"
+    created: "2025-01-16T18:45:17.347615094Z"
     description: 支持SSR代理的在线VSCode开发环境
-    digest: d876653036959e0e9e026c643352a40a88f32ab5b5866759a78cb1f4135b58c3
+    digest: 37636edf61023996d0795bb7f98eef7316b4361216337a15a16c752acbd3e321
     home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
     icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
     keywords:
@@ -31,9 +31,9 @@ entries:
       yunna.net/category-zh: 系统工具
     apiVersion: v2
     appVersion: latest
-    created: "2025-01-16T18:29:11.587270982Z"
+    created: "2025-01-16T18:45:17.347998031Z"
     description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
-    digest: 41b65195070275c0c48eace7c9d92f769c15df59bcb606860ee994ec466aae34
+    digest: 94021e7fc1ac50e2e437a31a38d2573c4a0cff76d5db9c2cee2afe4008c5b0f3
     home: https://github.com/example/ubuntu-ssh
     icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
     keywords:
@@ -48,4 +48,4 @@ entries:
     urls:
     - https://niehaoran.github.io/AppStore-Public/test/ubuntu-ssh-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-16T18:29:11.586450959Z"
+generated: "2025-01-16T18:45:17.346317049Z"
