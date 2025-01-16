@@ -1,0 +1,34 @@
+replicaCount: 1
+image:
+  imageRegistry: registry-2.yunna.net
+  repository: nidexiong/code-server-ssr
+  tag: latest
+  pullPolicy: Always
+services:
+  - name: http
+    port: 8080
+    targetPort: "8080"
+    protocol: TCP
+resources:
+  limits:
+    cpu: 1000m
+    memory: 2000Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 10Gi
+  storageClass: local
+env:
+  env1:
+    name: PASSWORD
+    value: changeme
+
+service:
+  type: NodePort
+
+tls:
+  enabled: true
+  secretName: code-server-ssr-tls
