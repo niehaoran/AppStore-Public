@@ -158,9 +158,8 @@ jobs:
               continue  
             fi
             
-            if ! git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" > /dev/null 2>&1; then
-          echo "这是新增的 Chart，跳过版本检查"
-          continue
+            if ! git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" | yq e '.version' - > /dev/null 2>&1; then
+              continue
             fi
             
             OLD_VERSION=$(git show origin/${{ github.base_ref }}:"$chart/Chart.yaml" | yq e '.version' -)
