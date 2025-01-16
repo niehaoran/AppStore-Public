@@ -53,13 +53,13 @@ jobs:
         run: |
           echo "Creating .deploy directory..."
           mkdir -p .deploy
-          
+
           echo "Finding and packaging charts..."
           for chart in $(find ./charts/stable -name Chart.yaml -exec dirname {} \;); do
             echo "Packaging $chart..."
             helm package "$chart" -d .deploy
           done
-          
+
           echo "Listing .deploy directory contents:"
           ls -la .deploy/
 
@@ -75,20 +75,20 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           echo "Cloning gh-pages branch..."
-          git clone --branch gh-pages https://github.com/jianzhis/TestMirror gh-pages
-          
+          git clone --branch gh-pages https://github.com/niehaoran/TestMirror gh-pages
+
           echo "Creating test directory..."
           mkdir -p gh-pages/test
-          
+
           echo "Listing .deploy directory contents:"
           ls -la .deploy/
-          
+
           echo "Moving .tgz files..."
           mv .deploy/*.tgz gh-pages/test/
-          
+
           cd gh-pages
-          helm repo index test --url https://jianzhis.github.io/TestMirror/test
-          
+          helm repo index test --url https://niehaoran.github.io/TestMirror/test
+
           git add .
           git commit -m "Publish new Helm chart versions to test" || echo "No changes to commit"
           git push
