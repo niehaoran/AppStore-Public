@@ -6,9 +6,9 @@ entries:
       yunna.net/category-zh: 开发工具
     apiVersion: v2
     appVersion: latest
-    created: "2025-01-16T18:14:25.670448571Z"
+    created: "2025-01-16T18:29:11.586941296Z"
     description: 支持SSR代理的在线VSCode开发环境
-    digest: e42af553554be5d074661fd8d34351b32b2a79b55e08186155edb1fdf4b5cf0a
+    digest: d876653036959e0e9e026c643352a40a88f32ab5b5866759a78cb1f4135b58c3
     home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
     icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
     keywords:
@@ -25,4 +25,27 @@ entries:
     urls:
     - https://niehaoran.github.io/AppStore-Public/test/code-server-ssr-1.0.0.tgz
     version: 1.0.0
-generated: "2025-01-16T18:14:25.669899612Z"
+  ubuntu-ssh:
+  - annotations:
+      yunna.net/category: system-tools
+      yunna.net/category-zh: 系统工具
+    apiVersion: v2
+    appVersion: latest
+    created: "2025-01-16T18:29:11.587270982Z"
+    description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
+    digest: 41b65195070275c0c48eace7c9d92f769c15df59bcb606860ee994ec466aae34
+    home: https://github.com/example/ubuntu-ssh
+    icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
+    keywords:
+    - ubuntu
+    - ssh
+    maintainers:
+    - email: niehaoran@yunna.net
+      name: niehaoran
+    name: ubuntu-ssh
+    sources:
+    - https://github.com/example/ubuntu-ssh
+    urls:
+    - https://niehaoran.github.io/AppStore-Public/test/ubuntu-ssh-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-01-16T18:29:11.586450959Z"
