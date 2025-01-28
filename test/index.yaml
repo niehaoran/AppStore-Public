@@ -1,51 +1,51 @@
 apiVersion: v1
 entries:
   code-server-ssr:
-    - annotations:
-        yunna.net/category: development
-        yunna.net/category-zh: 开发工具
-      apiVersion: v2
-      appVersion: latest
-      created: "2025-01-16T18:50:46.08414939Z"
-      description: 支持SSR代理的在线VSCode开发环境
-      digest: 1bdc22ac820a1a4e9ce89e2820ebbbadd923cd5fa026eb6637ff6e358c8b8d8a
-      home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
-      icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
-      keywords:
-        - 自托管
-        - 在线IDE
-        - VSCode
-        - SSR代理
-      maintainers:
-        - email: nidexiong@yunna.net
-          name: niehaoran
-      name: code-server-ssr
-      sources:
-        - https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
-      urls:
-        - https://niehaoran.github.io/AppStore-Public/test/code-server-ssr-1.0.0.tgz
-      version: 1.0.0
+  - annotations:
+      yunna.net/category: development
+      yunna.net/category-zh: 开发工具
+    apiVersion: v2
+    appVersion: latest
+    created: "2025-01-28T13:45:58.627342973Z"
+    description: 支持SSR代理的在线VSCode开发环境
+    digest: d9cef1970f8c105bdcce897d820d5ff1857e0748423fbebf07fce8979073e3c3
+    home: https://hub.docker.com/r/nidexiong/code-server-ssr
+    icon: https://assets.yunna.net/i/2024/12/15/d8jmxk.png
+    keywords:
+    - 自托管
+    - 在线IDE
+    - VSCode
+    - SSR代理
+    maintainers:
+    - email: nidexiong@yunna.net
+      name: niehaoran
+    name: code-server-ssr
+    sources:
+    - https://hub.docker.com/r/nidexiong/code-server-ssr
+    urls:
+    - https://niehaoran.github.io/AppStore-Public/test/code-server-ssr-1.0.0.tgz
+    version: 1.0.0
   ubuntu-ssh:
-    - annotations:
-        yunna.net/category: system-tools
-        yunna.net/category-zh: 系统工具
-      apiVersion: v2
-      appVersion: latest
-      created: "2025-01-16T18:50:46.084459175Z"
-      description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。'
-      digest: 293fd0f24a36c082fa78384abf305d99f629d629a0f41de12642e0a5dbd8c5c0
-      home: https://github.com/example/ubuntu-ssh
-      icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
-      keywords:
-        - ubuntu
-        - ssh
-      maintainers:
-        - email: niehaoran@yunna.net
-          name: niehaoran
-      name: ubuntu-ssh
-      sources:
-        - https://github.com/example/ubuntu-ssh
-      urls:
-        - https://niehaoran.github.io/AppStore-Public/test/ubuntu-ssh-0.1.0.tgz
-      version: 0.1.0
-generated: "2025-01-16T18:50:46.083611392Z"
+  - annotations:
+      yunna.net/category: system-tools
+      yunna.net/category-zh: 系统工具
+    apiVersion: v2
+    appVersion: latest
+    created: "2025-01-28T13:45:58.627671248Z"
+    description: '部署一个基于 Ubuntu 的 SSH 服务，支持通过环境变量配置。 '
+    digest: a5e37fad8d5588fdf70001daef21c47143b17148ed6b5178bef7b50fa188e98f
+    home: https://github.com/example/ubuntu-ssh
+    icon: https://assets.yunna.net/i/2024/12/13/114s1hr.png
+    keywords:
+    - ubuntu
+    - ssh
+    maintainers:
+    - email: niehaoran@yunna.net
+      name: niehaoran
+    name: ubuntu-ssh
+    sources:
+    - https://github.com/example/ubuntu-ssh
+    urls:
+    - https://niehaoran.github.io/AppStore-Public/test/ubuntu-ssh-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-01-28T13:45:58.6253128Z"
