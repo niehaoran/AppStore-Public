@@ -3,7 +3,7 @@ image:
   imageRegistry: registry-2.yunna.net
   repository: nidexiong/code-server-ssr
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 services:
   - name: https
     port: 8443
