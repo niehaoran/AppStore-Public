@@ -3,9 +3,9 @@ name: code-server-ssr
 description: 支持SSR代理的在线VSCode开发环境
 version: 1.0.0
 appVersion: latest
-home: https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
+home: https://hub.docker.com/r/nidexiong/code-server-ssr
 sources:
-  - https://hub.docker.com/repository/docker/nidexiong/code-server-ssr
+  - https://hub.docker.com/r/nidexiong/code-server-ssr
 maintainers:
   - name: niehaoran
     email: nidexiong@yunna.net
